@@ -34,7 +34,6 @@ img.banner {
 
 .image-container {
     max-width: 100%;
-    max-height: 25%;
     padding: 2.5%;
     border-color: black;
 }
@@ -47,8 +46,11 @@ img.banner {
 
 .content-container {
     width: 100%;
-    columns: 300px;
-    column-fill: auto;
+    display: grid;
+    /* auto auto means two columns */
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
 }
 
 .content {
@@ -58,10 +60,8 @@ img.banner {
 
 .content h2 {
     margin-left: 2.5%;
-    margin-top: 0%;
 }
 
 .content p {
     margin-left: 2.5%;
-    padding-bottom: 2.5%;
 }
