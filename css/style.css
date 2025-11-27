@@ -150,23 +150,77 @@ div.banner .banner-text {
 }
 
 .content-container {
-    width: 100%;
+    width: 98vw;
     display: grid;
     /* auto auto means two columns */
     grid-template-columns: auto auto auto;
-    gap: 10px;
-    padding: 10px;
+    gap: 1vw;
+    padding: 1vw;
 }
 
 .content {
     background-color: bisque;
     max-width: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content-container article:hover {
+    box-shadow: 3px 3px 5px;
+    background-color:darksalmon;
+}
+
+.content img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    position: relative;
+    top: -100%; /*bruteforcing elements upward*/
 }
 
 .content h2 {
     margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border: 3px /*solid black;*/;
+    font-size: 150%;
+    height: 15%;
+    position: relative;
+    top: -100%; /*bruteforcing elements upward*/
 }
 
 .content p {
     margin-left: 2.5%;
+    margin-right: 2.5%;
+    border: 3px /*solid black;*/;
+    position: relative;
+    top: -100%; /*bruteforcing elements upward*/
+}
+
+.content p.blurb {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    height: 25%;
+    overflow: hidden;
+}
+
+.content p.contributor {
+    margin-top: 0%;
+    text-align: right;
+    margin-bottom: 0%;
+}
+
+.content p.date {
+    text-align: right;
+    margin-top: 0%;
+}
+
+.content div.clickable {
+    border: 0px solid black; 
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: relative;
 }
