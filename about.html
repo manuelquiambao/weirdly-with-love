@@ -18,7 +18,7 @@
             <header><a href="collections.html">Collections</a></header>
             <header>Contributors</header>
             <header><a href="about.html">About</a></header>
-            <header>Contact Us</header>
+            <header><a href="https://forms.gle/BYjdvfsskxEfKZiy9">Contact Us</a></header>
         </div>
 
         <div class = "notepad">
@@ -52,8 +52,23 @@
                 </div>
             </div>
         </div>
-    
-    <h3><a href="index.html">Back to Home</a></h3>
     </div>
+
+    <script>
+        var coll = document.getElementsByClassName("above");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "vh";
+            } 
+        });
+    }
+    </script>
 </body>
 </html>

@@ -24,7 +24,7 @@
             <div><header><a href="collections.html">Collections</a></header></div>
             <div><header>Contributors</header></div>
             <div><header><a href="about.html">About</a></header></div>
-            <div><header>Contact Us</header></div>
+            <div><header><a href="https://forms.gle/BYjdvfsskxEfKZiy9">Contact Us</a></header></div>
         </div>
 
         <div class="banner">
@@ -65,5 +65,21 @@
         </div>
 
     </div>
+    <script>
+        var coll = document.getElementsByClassName("above");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "vh";
+            } 
+        });
+    }
+    </script>
 </body>
 </html>

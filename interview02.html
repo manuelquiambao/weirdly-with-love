@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Ghosts of the Present - weirdly, with love</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class = "interface">
+            <div class="above">
+            <img src="images/header_logo.svg">
+            </div>
+            <div class="above-selection">
+            <header><a href="index.html">Home</a></header>
+            <header><a href="discover.html">Discover</a></header>
+            <header><a href="collections.html">Collections</a></header>
+            <header>Contributors</header>
+            <header><a href="about.html">About</a></header>
+            <header><a href="https://forms.gle/BYjdvfsskxEfKZiy9">Contact Us</a></header>
+            </div>
+
+        <div class = "post">
+            <div class = "max">
+                <div class="key">
+                    <div class="image-container item1"><img src="images/thumbnail02.jpg"></div>
+                    <div class="key-content item2">
+                        <h1>The Ghosts of the Present (ft. Sophia)</h1>
+                        <p>hosted by Manuel Quiambao</p>
+                    </div>
+                    <audio controls controlsList="nodownload" class="item3" style="width: 100%">
+                    <source src="audio/conversations/interview02.mp3" type="audio/mpeg">
+                </audio>
+                </div>
+            </div> 
+
+            <div class="scrollable">
+                <div class = "quote">
+                    <span class = "speaker speaker1"></span>
+                    <span class = "text"><b>Transcript to be made...</b></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("above");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "vh";
+            } 
+        });
+    }
+    </script>
+</body>
+</html>
