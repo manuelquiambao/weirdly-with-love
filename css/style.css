@@ -30,6 +30,7 @@ body {
 h1 {
     text-align: center;
     font-family: Finesse;
+    color: #0A344B;
 }
 
 h2 {
@@ -451,9 +452,7 @@ div.clickable {
 
     .content-container {
     width: 94vw;
-    grid-template-columns: auto auto ;
-    gap: 1vw;
-    padding: 1vw;
+    grid-template-columns: auto auto; 
     }   
 
     .dropdown {
