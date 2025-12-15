@@ -3,29 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collections - weirdly, with love</title>
+    <title>BIPOC Toronto Youth - weirdly, with love</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    <div class="interface">
     <div class="above">
-        <img src="images/header_logo.svg">
-    </div>
-    <div class="above-selection">
-        <header><a href="index.html">Home</a></header>
-        <header>Discover</header>
-        <header><a href="collections.html">Collections</a></header>
-        <header>Contributors</header>
-        <header><a href="about.html">About</a></header>
-        <header>Contact Us</header>
-    </div>
+            <img src="images/header_logo.svg">
+            </div>
+            <div class="above-selection">
+            <header><a href="index.html">Home</a></header>
+            <header><a href="discover.html">Discover</a></header>
+            <header><a href="collections.html">Collections</a></header>
+            <header>Contributors</header>
+            <header><a href="about.html">About</a></header>
+            <header>Contact Us</header>
+            </div>
 
     <div class="banner">
-        <img src="images/stock-person1.jpg">
-        <h1>BIPOC Toronto Youth</h1>
-        <h2>Winter 2026</h2>
-        <p>We think often on how culture is cultivated through generations of lived experiences and traditions. But what if we look into the future?
-        As more of us immigrants move into Canada, as we become more globalized and interconnected, what are the lived experiences we will tell our progeny?
-        <br><br><b>The inaugural theme for "weirdly, with love" focuses on lived experiences of young Black, Indigenous and other people of color.</b></p>
+        <img src="images/collections01.jpg" style = "filter: brightness(75%)">
+        <div class = "banner-content">
+            <h1>BIPOC Toronto Youth</h1>
+            <h2>Winter 2026</h2>
+            <p>We think often on how culture is cultivated through generations of lived experiences and traditions. But what if we look into the future?
+            As more of us immigrants move into Canada, as we become more globalized and interconnected, what are the lived experiences we will tell our progeny?
+            <br><br><b>The inaugural theme for "weirdly, with love" focuses on lived experiences of young Black, Indigenous and other people of color.</b></p>
+        </div>
     </div>
 
     <main class="content-container">
@@ -39,22 +42,32 @@
         </article>
         <article class="content">
             <a href="artifact00.html"><div class="clickable"></div></a>
-            <img src="images/stock-thing1.jpg">
+            <img src="images/thumbnail03.jpg">
             <h2>Struggling to Grow Roots (ft. Kayli)</h2>
-            <p class="blurb">A blurb about the artifact.</p>
+            <p class="blurb">When you grow as an immigrant, what is it like? Kayli and Manuel talk all about it.</p>
             <p class="contributor">Kayli Chow, Manuel Quiambao</p>
-            <p class="date">26 Nov 2025</p>
-        </article>
-        <article class="content">
-            <a href="artifact00.html"><div class="clickable"></div></a>
-            <img src="images/stock-thing1.jpg">
-            <h2>Artifact</h2>
-            <p class="blurb">A blurb about the artifact.</p>
-            <p class="contributor">Manuel Quiambao</p>
-            <p class="date">26 Nov 2025</p>
+            <p class="date">14 Dec 2025</p>
         </article>
         
     </main>
     <p><a href="index.html">Back to Home</a></p>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("above");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "vh";
+            } 
+        });
+    }
+    </script>
 </body>
 </html>

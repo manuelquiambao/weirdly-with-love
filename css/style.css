@@ -36,6 +36,18 @@ h2 {
 p {
     font-family: Vercetti;
 }
+sub {
+    font-family: Vercetti;
+    font-size: 2vh;
+}
+a {
+    font-style: normal;
+    color: #EFDA8F;
+}
+
+a:visited {
+    color: #EFDA8F;
+}
 
 /*header images*/
 div.above {
@@ -51,6 +63,7 @@ div.above {
 div.above img {
     max-height: 5vh;
 }
+
 
 div.above-selection {
     display: flex;
@@ -74,6 +87,49 @@ div.above-selection header {
     font-size: 3em;
 }
 
+header a {
+    color: #0A344B;
+
+}
+
+div.above-selection div :hover {
+    background-color: #eace6a;
+}
+
+.collection-banner {
+    text-align: center;
+    font-size: 1vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    height: 20vh;
+}
+
+.collection-banner img {
+    max-width: 100%;
+    width: 100%;
+    height: 20vh;
+
+    position: relative;
+    top: -100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.collection-banner h1 {
+    position: relative;
+    top: -200%; /* bruteforcing elements upward */
+    font-size: 5vh;
+}
+
+.collection-banner sub {
+    position: relative;
+    top: -200%; /* bruteforcing elements upward */
+    color: #e6e6e6;
+}
+
+.collection-banner div:hover {
+    box-shadow: 0px 0px 20px black inset;
+}
 #grand-title {
     max-width: 100%;
     width: 80%;
@@ -152,6 +208,18 @@ div.banner .banner-text {
     font-size: 2em;
 }
 
+.banner-content {
+    position: relative;
+    top: -100%;
+}
+
+.banner-content h1 {
+    font-size: 4em;
+}
+
+.banner-content h2 {
+    font-size: 2em;
+}
 .image-container {
     max-width: 100%;
     padding: 2.5%;
@@ -233,7 +301,7 @@ div.banner .banner-text {
     margin-top: 0%;
 }
 
-.content div.clickable {
+div.clickable {
     border: 0px solid black; 
     height: 100%;
     width: 100%;
@@ -312,11 +380,96 @@ div.banner .banner-text {
     flex-direction: row;
     justify-content: space-between;
 }
-/* extra small devices i.e. phones 600px and below */
-@media only screen and (max-width: 600px) {
+/* smaller devices i.e. phones 960px and below */
+@media only screen and (max-width: 960px) {
     h1 {
         color: red;
     }
+
+    div.above-selection {
+        flex-direction: column;
+        position: sticky;
+        height: 30vh;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+
+    .notepad-content {
+        flex-direction: column-reverse;
+    }
+
+    div.above {
+        position: sticky;
+        cursor: pointer;
+        border: none;
+        text-align: left;
+        outline: none;
+    }
+
+    .dropdown {
+        cursor: pointer;
+        border: none;
+        text-align: center;
+        font-size: 3vh;
+    }
+
+    .post {
+        flex-direction: column;
+    }
+
+    .max {
+        height: 35vh;
+        width: 100%;
+        top: 5%;
+        align-content: center;
+    }
+
+    .key {
+        display: grid;
+        justify-content: start;
+        grid-auto-flow: column;
+        padding: 2.5%;
+        align-items: center;
+    }
+
+    .key img {
+        max-width: 20vh;
+    }
+
+    .key .item1 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .scrollable {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        color: blue
+    }
+    .post {
+        flex-direction: column;
+    }
+
+    .max {
+        height: 25vh;
+        width: 100%;
+        top: 5%;
+        align-content: center;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10%;
+        width: 80%;
+    }
+
 }
 
 /* extra small devices i.e. portrait tablets and large phones, 600px and up */
@@ -324,5 +477,9 @@ div.banner .banner-text {
     h1 {
         color: green;
         font-family: Finesse;
+    }
+
+    #dropdown {
+        font-size: 5vh;
     }
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collections - weirdly, with love</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
 <body>
     <div class = "interface">
@@ -13,22 +14,44 @@
         </div>
         <div class="above-selection">
             <header><a href="index.html">Home</a></header>
-            <header>Discover</header>
+            <header><a href="discover.html">Discover</a></header>
             <header><a href="collections.html">Collections</a></header>
             <header>Contributors</header>
             <header><a href="about.html">About</a></header>
             <header>Contact Us</header>
         </div>
-        <div>
-            <h1>Collections</h1>
+
+        <div class = "collection-banner">
+            <a href="collections01.html"><div class="clickable"></div></a>
+            <img src="/images/collections01.jpg" style="filter: brightness(75%);">
+            <h1><a href=collections01.html>BIPOC Toronto Youth</a></h1>
+            <sub>Winter-Spring 2026 Collection</sub>
         </div>
-        <div>
-            <h2><a href=collections01.html>BIPOC Toronto Youth</a></h2>
-            <sub>Winter 2026 Collection</sub>
-        </div>
-        <div>
-            <h2><a href=collections00.html>Test Content Page</a></h2>
+
+        <div class = "collection-banner">
+            <div class="clickable"></div>
+            <img src="/images/stock-thing1.jpg" style="filter: brightness(75%);">
+            <h1><a href=collections01.html>More to come...</a></h1>
+            <sub>Coming soon summer 2026</sub>
         </div>
     </div>
+
+    <script>
+        var coll = document.getElementsByClassName("above");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "vh";
+            } 
+        });
+    }
+    </script>
+
 </body>
 </html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - weirdly, with love</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+</head>
+<body>
+    <div class="interface">
+        <div class="above">
+        <img src="images/header_logo.svg">
+    </div>
+    <div class="above-selection">
+        <header><a href="index.html">Home</a></header>
+        <header><a href="discover.html">Discover</a></header>
+        <header><a href="collections.html">Collections</a></header>
+        <header>Contributors</header>
+        <header><a href="about.html">About</a></header>
+        <header>Contact Us</header>
+    </div>
+
+    
+    <h1>Interviews</h1>
+    <main class="content-container">
+        <article class="content">
+            <a href="artifact00.html"><div class="clickable"></div></a>
+            <img src="images/thumbnail01.png">
+            <h2>Partipicating in Virtual Culture (ft. Nick)</h2>
+            <p class="blurb">Nick and Manuel talk about lived experiences in the digital ecosystem of the Internet.</p>
+            <p class="contributor">Nick Milcic, Manuel Quiambao</p>
+            <p class="date">14 Dec 2025</p>
+        </article>
+        <article class="content">
+            <a href="artifact00.html"><div class="clickable"></div></a>
+            <img src="images/thumbnail03.jpg">
+            <h2>Struggling to Grow Roots (ft. Kayli)</h2>
+            <p class="blurb">When you grow as an immigrant, what is it like? Kayli and Manuel talk all about it.</p>
+            <p class="contributor">Kayli Chow, Manuel Quiambao</p>
+            <p class="date">26 Nov 2025</p>
+        </article>
+        <article class="content">
+            <a href="artifact00.html"><div class="clickable"></div></a>
+            <img src="images/thumbnail02.jpg">
+            <h2>The Ghosts of the Present (ft. Sophia)</h2>
+            <p class="blurb">From ghosts in the mirror to infections in franchises, Sophia and Manuel delve into the world of contemporary urban legends.</p>
+            <p class="contributor">Sophia Crisostomo, Manuel Quiambao</p>
+            <p class="date">26 Nov 2025</p>
+        </article>
+    </main>
+
+    <h1>Artifacts</h1>
+    <main class="content-container">
+        <article class="content">
+            <a href="artifact00.html"><div class="clickable"></div></a>
+            <img src="images/thumbnail01.png">
+            <h2>More coming soon...</h2>
+            <p class="blurb">Nick and Manuel talk about lived experiences in the digital ecosystem of the Internet.</p>
+            <p class="contributor">Nick Milcic, Manuel Quiambao</p>
+            <p class="date">14 Dec 2025</p>
+        </article>
+        <article class="content">
+            <a href="artifact00.html"><div class="clickable"></div></a>
+            <img src="images/thumbnail03.jpg">
+            <h2>More coming soon...</h2>
+            <p class="blurb">When you grow as an immigrant, what is it like? Kayli and Manuel talk all about it.</p>
+            <p class="contributor">Kayli Chow, Manuel Quiambao</p>
+            <p class="date">26 Nov 2025</p>
+        </article>
+        <article class="content">
+            <a href="artifact00.html"><div class="clickable"></div></a>
+            <img src="images/thumbnail02.jpg">
+            <h2>More coming soon...</h2>
+            <p class="blurb">From ghosts in the mirror to infections in franchises, Sophia and Manuel delve into the world of contemporary urban legends.</p>
+            <p class="contributor">Sophia Crisostomo, Manuel Quiambao</p>
+            <p class="date">26 Nov 2025</p>
+        </article>
+    </main>
+
+    
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("above");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "vh";
+            } 
+        });
+    }
+    </script>
+</body>
+</html>

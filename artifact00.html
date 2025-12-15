@@ -9,27 +9,26 @@
     <body>
         <div class = "interface">
             <div class="above">
-                <img src="images/header_logo.svg">
+            <img src="images/header_logo.svg">
             </div>
-
             <div class="above-selection">
-                <header><a href="index.html">Home</a></header>
-                <header>Discover</header>
-                <header><a href="collections.html">Collections</a></header>
-                <header>Contributors</header>
-                <header><a href="about.html">About</a></header>
-                <header>Contact Us</header>
+            <header><a href="index.html">Home</a></header>
+            <header><a href="discover.html">Discover</a></header>
+            <header><a href="collections.html">Collections</a></header>
+            <header>Contributors</header>
+            <header><a href="about.html">About</a></header>
+            <header>Contact Us</header>
             </div>
 
         <div class = "post">
             <div class = "max">
                 <div class="key">
-                    <div class="image-container"><img src="images/thumbnail01.png"></div>
-                    <div class="key-content">
+                    <div class="image-container item1"><img src="images/thumbnail01.png"></div>
+                    <div class="key-content item2">
                         <h1>Artifact Example Page</h1>
                         <p>hosted by Manuel Quiambao</p>
                     </div>
-                    <audio controls controlsList="nodownload">
+                    <audio controls controlsList="nodownload" class="item3">
                     <source src="audio/conversations/01.mp3" type="audio/mpeg">
                 </audio>
                 </div>
@@ -98,5 +97,21 @@
         </div>
     
     </div>
+    <script>
+        var coll = document.getElementsByClassName("above");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "vh";
+            } 
+        });
+    }
+    </script>
 </body>
 </html>
