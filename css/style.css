@@ -301,7 +301,7 @@ div.banner .banner-text {
     margin-top: 0%;
     margin-bottom: 0%;
     border: 3px /*solid black;*/;
-    font-size: 200%;
+    font-size: 150%;
     overflow: hidden;
     height: 15%;
     position: relative;
@@ -314,7 +314,7 @@ div.banner .banner-text {
     border: 3px /*solid black;*/;
     position: relative;
     top: -100%; /*bruteforcing elements upward*/
-    font-size: 150%;
+    font-size: 100%;
     overflow: hidden;
     font-family: Vercetti;
 }
