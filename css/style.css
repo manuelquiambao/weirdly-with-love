@@ -452,6 +452,7 @@ div.clickable {
 
     .content-container {
     width: 94vw;
+    padding: 1.5vw;
     grid-template-columns: auto auto; 
     }   
 
